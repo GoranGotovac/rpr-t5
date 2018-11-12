@@ -15,7 +15,7 @@
         <URL value="@jednako.css"/>
     </stylesheets>
     <stylesheets>
-        <URL value="@screen.css"/>
+        <URL value="@display.css"/>
     </stylesheets>
     <rowConstraints>
       <RowConstraints vgrow="ALWAYS" minHeight="10.0" prefHeight="30.0" />
@@ -33,14 +33,14 @@
    </columnConstraints>
    <children>
       <Button fx:id="btn0" maxWidth="Infinity" mnemonicParsing="false" text="0" onAction="#nula" GridPane.columnSpan="2" GridPane.rowIndex="5" />
-      <Button fx:id="btnDot" maxWidth="Infinity" mnemonicParsing="false" text="," onAction="#zarez" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Button fx:id="dotBtn" maxWidth="Infinity" mnemonicParsing="false" text="," onAction="#zarez" GridPane.columnIndex="2" GridPane.rowIndex="5" />
       <Button fx:id="btn1" maxWidth="Infinity" mnemonicParsing="false" text="1" onAction="#jedan" GridPane.rowIndex="4" />
       <Button fx:id="btn2"  maxWidth="Infinity" mnemonicParsing="false" text="2" onAction="#dva" GridPane.columnIndex="1" GridPane.rowIndex="4" />
       <Button fx:id="btn3" maxWidth="Infinity" mnemonicParsing="false" text="3" onAction="#tri" GridPane.columnIndex="2" GridPane.rowIndex="4" />
       <Button fx:id="btn4" maxWidth="Infinity" mnemonicParsing="false" text="4" onAction="#cetiri" GridPane.rowIndex="3" />
       <Button fx:id="btn5" maxWidth="Infinity" mnemonicParsing="false" text="5" onAction="#pet" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <Button fx:id="btn6" maxWidth="Infinity" mnemonicParsing="false" text="6" onAction="#sest" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-      <Button fx:id="btnPlus" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" text="+" onAction="#plus" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+      <Button fx:id="plusBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" text="+" onAction="#plus" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2" />
       <Button fx:id="btn7" maxWidth="Infinity" mnemonicParsing="false" text="7" onAction="#sedam" GridPane.rowIndex="2" />
       <Button fx:id="btn8" maxWidth="Infinity" mnemonicParsing="false" text="8" onAction="#osam" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Button fx:id="btn9" maxWidth="Infinity" mnemonicParsing="false" text="9" onAction="#devet" GridPane.columnIndex="2" GridPane.rowIndex="2" />
@@ -49,8 +49,8 @@
       <Button fx:id="btnPuta" maxWidth="Infinity" mnemonicParsing="false" text="X" onAction="#put" GridPane.columnIndex="2" GridPane.rowIndex="1" />
       <Button fx:id="btnMinus" maxWidth="Infinity" mnemonicParsing="false" text="-" onAction="#minus" GridPane.columnIndex="3" GridPane.rowIndex="1" />
       <Label maxWidth="Infinity" text="Label" GridPane.columnSpan="4" />
-      <Button fx:id="btnEquals" id="jednakoBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" text="=" onAction="#jednako" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
-       <Label fx:id="display" id="screenBtn" maxHeight="Infinity" maxWidth="Infinity" text="${controller.ulaz}" GridPane.columnSpan="4" />
+      <Button fx:id="equalsBtn" id="equalsBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" text="=" onAction="#jednako" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
+       <Label fx:id="display" id="display" maxHeight="Infinity" maxWidth="Infinity" text="${controller.ulaz}" GridPane.columnSpan="4" />
    </children>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
