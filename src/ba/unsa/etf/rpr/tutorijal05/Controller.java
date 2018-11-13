@@ -108,6 +108,7 @@ public class Controller {
         else if(jednako) {
             ulaz.set("3");
         }
+
         else
             ulaz.set(ulaz.get()+"3");
     }
