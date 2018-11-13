@@ -70,6 +70,24 @@ class MainTest {
         assertEquals("456", display.getText());
     }
     @Test
+    public void nulaMnozenje (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btnPuta");
+        robot.clickOn("#btn5");
+        robot.clickOn("#equalsBtn");
+        assertEquals("0.0", display.getText());
+    }
+    @Test
+    public void jednakoBtn (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn5");
+        robot.clickOn("#btnPuta");
+        robot.clickOn("#btn5");
+        robot.clickOn("#equalsBtn");
+        robot.clickOn("#btn5");
+        assertEquals("5", display.getText());
+    }
+    @Test
     public void nulaTest (FxRobot robot) {
         display = robot.lookup("#display").queryAs(Label.class);
         robot.clickOn("#btn5");

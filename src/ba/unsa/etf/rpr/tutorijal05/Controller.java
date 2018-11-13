@@ -12,6 +12,7 @@ public class Controller {
     private String operacija = "";
     private boolean brisi = false;
     private double postotak = 1;
+    private boolean jednako = false;
     public Controller() {
         ulaz = new SimpleStringProperty("0");
     }
@@ -32,7 +33,11 @@ public class Controller {
             brisi = !brisi;
         } else if (!operacija.equals("")) {
             ulaz.set(ulaz.get() + "0");
-        } else {
+
+        }
+        else if(jednako) {
+            ulaz.set("0");
+        }else {
             ulaz.set(ulaz.get() + "0");
         }
     }
@@ -64,6 +69,9 @@ public class Controller {
         else if(!operacija.equals("")) {
             ulaz.set(ulaz.get()+"1");
         }
+        else if(jednako) {
+            ulaz.set("1");
+        }
         else
             ulaz.set(ulaz.get()+"1");
     }
@@ -78,6 +86,9 @@ public class Controller {
         }
         else if(!operacija.equals("")) {
             ulaz.set(ulaz.get()+"2");
+        }
+        else if(jednako) {
+            ulaz.set("2");
         }
         else
             ulaz.set(ulaz.get()+"2");
@@ -94,6 +105,9 @@ public class Controller {
         else if(!operacija.equals("")) {
             ulaz.set(ulaz.get()+"3");
         }
+        else if(jednako) {
+            ulaz.set("3");
+        }
         else
             ulaz.set(ulaz.get()+"3");
     }
@@ -108,6 +122,9 @@ public class Controller {
         }
         else if(!operacija.equals("")) {
             ulaz.set(ulaz.get()+"4");
+        }
+        else if(jednako) {
+            ulaz.set("4");
         }
         else
             ulaz.set(ulaz.get()+"4");
@@ -124,6 +141,9 @@ public class Controller {
             else if(!operacija.equals("")) {
                 ulaz.set(ulaz.get()+"5");
             }
+            else if(jednako) {
+                ulaz.set("5");
+            }
             else
                 ulaz.set(ulaz.get()+"5");
         }
@@ -139,6 +159,9 @@ public class Controller {
         }
         else if(!operacija.equals("")) {
             ulaz.set(ulaz.get()+"6");
+        }
+        else if(jednako) {
+            ulaz.set("6");
         }
         else
             ulaz.set(ulaz.get()+"6");
@@ -162,6 +185,9 @@ public class Controller {
         else if(!operacija.equals("")) {
             ulaz.set(ulaz.get()+"7");
         }
+        else if(jednako) {
+            ulaz.set("7");
+        }
         else
             ulaz.set(ulaz.get()+"7");
     }
@@ -177,6 +203,9 @@ public class Controller {
         else if(!operacija.equals("")) {
             ulaz.set(ulaz.get()+"9");
         }
+        else if(jednako) {
+            ulaz.set("9");
+        }
         else
             ulaz.set(ulaz.get()+"9");
     }
@@ -191,6 +220,9 @@ public class Controller {
         }
         else if(!operacija.equals("")) {
             ulaz.set(ulaz.get()+"8");
+        }
+        else if(jednako) {
+            ulaz.set("8");
         }
         else
             ulaz.set(ulaz.get()+"8");
@@ -251,5 +283,7 @@ public class Controller {
             ulaz.set(String.valueOf(Double.parseDouble(ulaz.get())*0.01));
             operacija="";
         }
+        jednako=true;
+
     }
 }
