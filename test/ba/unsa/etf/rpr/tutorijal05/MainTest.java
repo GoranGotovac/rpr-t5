@@ -47,6 +47,15 @@ class MainTest {
         robot.clickOn("#btn3");
         assertEquals("123", display.getText());
     }
+    @Test
+    public void dotTest (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn5");
+        robot.clickOn("#dotBtn");
+        robot.clickOn("#btn3");
+        robot.clickOn("#dotBtn");
+        assertEquals("5.3", display.getText());
+    }
 
     @Test
     public void number123Plus456 (FxRobot robot) {
@@ -60,6 +69,63 @@ class MainTest {
         robot.clickOn("#btn6");
         assertEquals("456", display.getText());
     }
+    @Test
+    public void nulaTest (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn5");
+        robot.clickOn("#btnDivide");
+        robot.clickOn("#btn0");
+        robot.clickOn("#equalsBtn");
+        assertEquals("Math Error", display.getText());
+    }
+    @Test
+    public void number123Minus456 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn3");
+        robot.clickOn("#btnMinus");
+        robot.clickOn("#btn4");
+        robot.clickOn("#btn5");
+        robot.clickOn("#btn6");
+        robot.clickOn("#equalsBtn");
+        assertEquals("-333.0", display.getText());
+    }
+    @Test
+    public void number123Puta456 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn3");
+        robot.clickOn("#btnPuta");
+        robot.clickOn("#btn4");
+        robot.clickOn("#btn5");
+        robot.clickOn("#btn6");
+        robot.clickOn("#equalsBtn");
+        assertEquals("56088.0", display.getText());
+    }
+    @Test
+    public void number123Podijeljeno456 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn3");
+        robot.clickOn("#btnDivide");
+        robot.clickOn("#btn4");
+        robot.clickOn("#btn5");
+        robot.clickOn("#btn6");
+        robot.clickOn("#equalsBtn");
+        assertEquals("0.26973684210526316", display.getText());
+    }
+    @Test
+    public void number5Posto (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn5");
+        robot.clickOn("#btnPost");
+        robot.clickOn("#equalsBtn");
+        assertEquals("0.05", display.getText());
+    }
+
 
     @Test
     public void number123Plus456Equals (FxRobot robot) {

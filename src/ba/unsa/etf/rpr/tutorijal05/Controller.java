@@ -11,6 +11,7 @@ public class Controller {
     private double razlomak = 1;
     private String operacija = "";
     private boolean brisi = false;
+    private double postotak = 1;
     public Controller() {
         ulaz = new SimpleStringProperty("0");
     }
@@ -45,6 +46,9 @@ public class Controller {
         }
         else if(!operacija.equals("")) {
             ulaz.set(ulaz.get()+".");
+        }
+        else if(ulaz.get().contains(".")) {
+            ulaz.set(ulaz.get());
         }
         else ulaz.set(ulaz.get()+".");
     }
@@ -193,6 +197,10 @@ public class Controller {
     }
 
     public void postotak(ActionEvent actionEvent) {
+        postotak = Double.parseDouble(ulaz.get())*0.01;
+        operacija ="%";
+        brisi = true;
+
     }
 
     public void podijeljeno(ActionEvent actionEvent) {
@@ -230,9 +238,18 @@ public class Controller {
             puta = 1;
         }
         if(operacija.equals("/")) {
+            if(String.valueOf(ulaz.get()).equals("0")) {
+                ulaz.set("Math Error");
+            }
+            else {
             ulaz.set(String.valueOf(razlomak/Double.parseDouble(ulaz.get())));
             operacija="";
-            razlomak = 1;
+            razlomak = 1; }
+
+        }
+        if(operacija.equals("%")) {
+            ulaz.set(String.valueOf(Double.parseDouble(ulaz.get())*0.01));
+            operacija="";
         }
     }
 }
